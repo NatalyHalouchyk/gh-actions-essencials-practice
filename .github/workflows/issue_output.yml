@@ -1,0 +1,8 @@
+name: Output information triggered an issue
+on: issues
+jobs:
+  output:
+    runs-on: windows-latest
+    steps:
+      - name: Output details of the event which triggered the issue
+        run: echo "${{ toJson(github.event) }}"
