@@ -2,7 +2,7 @@ name: Output information triggered an issue
 on: issues
 jobs:
   output:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Output details of the event which triggered the issue
         run: echo "${{ toJSON(github) }}"
